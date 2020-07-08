@@ -11,7 +11,9 @@ public class ClientHandler {
     private DataOutputStream out;
     private Server server;
 
+
     public ClientHandler(Server server, Socket socket) {
+
         try {
             this.socket = socket;
             this.server = server;
@@ -50,7 +52,6 @@ public class ClientHandler {
                             e.printStackTrace();
                         }
                         server.unsubscribe(ClientHandler.this); //!!!!!!!!!!!!!
-
                     }
 
                 }
